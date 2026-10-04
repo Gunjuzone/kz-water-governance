@@ -1,19 +1,19 @@
-# Akmaral-Project: water policy in Central Asia, visual / webpage
+# Akmaral-Project: water law of Kazakhstan, visual web page
 
-Build a visual web page presenting Akmaral's research on water policy in Central Asia.
+A visual web page presenting Akmaral's research on water governance in Kazakhstan.
 
 ## Status
 
-Waiting on inputs. Nothing can be built until the three items below arrive.
+First version is live at https://gunjuzone.github.io/kz-water-governance/ and is waiting for Akmaral's review.
+The data covers Kazakhstan only (Water Code 2025 and Ecological Code 2021).
 
-## Expected inputs (drop them here)
+## Inputs
 
-| Item | Where it goes | Arrived |
-|---|---|---|
-| Research data (tables, spreadsheets, spatial files) | `inputs/data/` | [ ] |
-| Template web page to follow | `inputs/template/` | [ ] |
-| Co-worker's notebook using similar data | `inputs/reference_notebook/` | [ ] |
-| Akmaral's text, paper or slides (if any) | `inputs/docs/` | [ ] |
+| Item | Where it is |
+|---|---|
+| Coding book and supplementary material | `inputs/data/` |
+| Template (Pachama screenshot) | `inputs/template/` |
+| Co-worker's notebook | `inputs/reference_notebook/` |
 
 Inputs stay untouched as received. All cleaning and derived files go to `work/` or `site/data/`.
 
@@ -28,10 +28,8 @@ Inputs stay untouched as received. All cleaning and derived files go to `work/` 
 | `outputs/figures/` | Static chart exports (PNG/SVG) for slides or the paper |
 | `notes/` | Decisions, questions for Akmaral, meeting notes |
 
-## Build and preview
+## Build, preview and publish
 
-Static page, so a local server is enough:
-
-    cd ~/Akmaral-Project/site && python3 -m http.server 8000
-
-Then open http://localhost:8000
+    python3 work/scripts/build_data.py                      # inputs -> site/data/data.json
+    cd site && python3 -m http.server 8000                  # preview at http://localhost:8000
+    work/scripts/deploy.sh                                  # publish site/ to GitHub Pages

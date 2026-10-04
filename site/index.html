@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
+<title>Water law of Kazakhstan, rule by rule</title>
+<meta name="description" content="Kazakhstan's Water Code and Ecological Code split into single rules: who must, may or must not do what, and for whom.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600&family=JetBrains+Mono:wght@500&family=Sofia+Sans+Extra+Condensed:wght@700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="nav">
+  <a class="wordmark" href="#top" aria-label="Water rules of Kazakhstan, top of page">
+    <svg viewBox="0 0 28 28" width="28" height="28" aria-hidden="true"><path d="M3 9c4-4 7 4 11 0s7-4 11 0M3 15c4-4 7 4 11 0s7-4 11 0M3 21c4-4 7 4 11 0s7-4 11 0" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>
+    Water rules of Kazakhstan
+  </a>
+  <nav aria-label="Sections">
+    <a href="#themes">Themes</a>
+    <a href="#actors">Actors</a>
+    <a href="#ministries">Ministries</a>
+    <a href="#rules">All rules</a>
+  </nav>
+  <a class="btn btn-mint" href="https://github.com/Gunjuzone/kz-water-governance">Get the data</a>
+</header>
+
+<main id="main">
+<section class="hero" id="top">
+  <h1>Water law,<br>rule by rule.</h1>
+  <div class="hero-side">
+    <p>Kazakhstan's Water Code and Ecological Code, split into <span data-n="statements">496</span> single rules: who must, may or must not do what, and for whom.</p>
+    <div class="btn-row">
+      <a class="btn btn-mint" href="#actors">See the actors</a>
+      <a class="btn btn-line" href="#rules">Browse the rules</a>
+    </div>
+  </div>
+</section>
+
+<figure class="hero-image">
+  <img src="assets/img/ili-delta.jpg" width="2400" height="1100" alt="Satellite view of the Ili River delta and the ice breaking up on Lake Balkhash, south-eastern Kazakhstan">
+  <figcaption>Ili River delta and Lake Balkhash, March 2020. NASA Earth Observatory, Landsat 8.</figcaption>
+</figure>
+
+<section class="lede wrap">
+  <p class="statement">Each article of the law is cut into single statements. Each statement names a body, what it must or may do, and who is on the receiving end. Put together, they show who actually runs water in Kazakhstan.</p>
+  <a class="btn btn-mint" href="#anatomy">See how a rule is coded</a>
+</section>
+
+<hr class="rainbow wrap">
+
+<section class="anatomy wrap" id="anatomy">
+  <div class="anatomy-text">
+    <h2>One rule, taken apart</h2>
+    <p>Water Code, Article 25. The law lists what the subsoil authority does; this is one line of that list.</p>
+    <blockquote lang="ru" id="ex-text"></blockquote>
+    <p class="gloss">In English: the subsoil authority approves a groundwater abstraction project where abstraction exceeds one thousand cubic metres a day.</p>
+  </div>
+  <dl class="parts" id="ex-parts"></dl>
+</section>
+
+<section class="themes" id="themes">
+  <div class="wrap center">
+    <h2>What the rules are about</h2>
+    <p class="sub">Every rule belongs to one of five themes. Pick one to see who holds its rules and how strict they are.</p>
+    <div class="tabs" role="tablist" aria-label="Theme" id="tabs"></div>
+  </div>
+  <div class="wrap">
+    <div class="panel" id="theme-panel" role="tabpanel">
+      <div class="panel-head">
+        <p class="big" id="theme-count"></p>
+        <div>
+          <h3 id="theme-name"></h3>
+          <p id="theme-blurb"></p>
+        </div>
+      </div>
+      <div class="panel-grid">
+        <div>
+          <h4>Rules per theme</h4>
+          <div class="bars" id="bars-theme"></div>
+        </div>
+        <div>
+          <h4>How binding</h4>
+          <div class="bars" id="bars-deontic"></div>
+        </div>
+        <div>
+          <h4>Bodies holding the most rules</h4>
+          <div class="bars" id="bars-actors"></div>
+          <ul class="legend" id="legend-actors"></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="findings wrap">
+  <article class="photo-card">
+    <p class="eyebrow">Where the rules sit</p>
+    <h3 id="finding-1"></h3>
+    <p id="finding-1-sub"></p>
+    <a class="btn btn-line-light" href="#actors" data-select="BWM">Show the basin offices</a>
+  </article>
+  <article class="photo-card alt">
+    <p class="eyebrow">How the law speaks</p>
+    <h3 id="finding-2"></h3>
+    <p id="finding-2-sub"></p>
+    <a class="btn btn-line-light" href="#rules" data-deontic="May">Show the permissions</a>
+  </article>
+</section>
+
+<section class="actors" id="actors">
+  <div class="wrap center">
+    <h2>Who answers to whom</h2>
+    <p class="sub">Each circle is a body named in the law. A line runs from the body that holds a rule to the body the rule is aimed at. Select a circle to read its rules.</p>
+    <ul class="legend center" id="legend-net"></ul>
+  </div>
+  <div class="wrap net-layout">
+    <div class="net-stage">
+      <svg id="net" viewBox="0 0 920 700" role="group" aria-label="Network of bodies named in the law"></svg>
+      <div class="tip" id="tip" hidden></div>
+    </div>
+    <aside class="net-detail" id="net-detail" aria-live="polite"></aside>
+  </div>
+  <div class="wrap">
+    <details class="table-view">
+      <summary>Show the bodies as a table</summary>
+      <div class="table-scroll"><table id="actor-table"></table></div>
+    </details>
+  </div>
+</section>
+
+<section class="ministries wrap" id="ministries">
+  <div class="min-list">
+    <h2>Inside the six ministries</h2>
+    <p class="sub">Water is not one ministry's job. These six share it. Open one to see how it is organised.</p>
+    <div id="min-buttons" role="tablist" aria-label="Ministry" aria-orientation="vertical"></div>
+  </div>
+  <div class="org" id="org" role="tabpanel"></div>
+</section>
+
+<section class="rules" id="rules">
+  <div class="wrap">
+    <div class="rules-head">
+      <h2>All <span data-n="statements">496</span> rules</h2>
+      <p class="sub" id="rules-count" aria-live="polite"></p>
+    </div>
+    <form class="filters" id="filters" onsubmit="return false">
+      <label>Search the text<input type="search" id="f-q" placeholder="e.g. разрешение" autocomplete="off"></label>
+      <label>Theme<select id="f-as"></select></label>
+      <label>Binding<select id="f-deontic"></select></label>
+      <label>Body<select id="f-actor"></select></label>
+      <button type="button" class="btn btn-line" id="f-reset">Clear filters</button>
+    </form>
+    <ol class="rule-list" id="rule-list"></ol>
+    <button type="button" class="btn btn-line" id="more">Show more rules</button>
+  </div>
+</section>
+
+<section class="cta wrap">
+  <div class="cta-card">
+    <h2>Use the coding book</h2>
+    <p>The full spreadsheet, the ministry tables and the code behind this page.</p>
+    <a class="btn btn-mint" href="https://github.com/Gunjuzone/kz-water-governance">Open the repository</a>
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <p class="footer-line">Water law of Kazakhstan, rule by rule</p>
+      <a class="btn btn-mint" href="#top">Back to top</a>
+    </div>
+    <hr class="rainbow">
+    <div class="footer-cols">
+      <div>
+        <h3>Sources</h3>
+        <p>Water Code of the Republic of Kazakhstan (2025), <span data-n="wat"></span> rules. Ecological Code (2021), Article 212, <span data-n="eco"></span> rules. Rule texts are shown in the original Russian.</p>
+      </div>
+      <div>
+        <h3>Method</h3>
+        <p>Statements are coded with the institutional grammar: attribute, deontic, aim, object, context. Ministry structures come from the supplementary tables of the paper.</p>
+      </div>
+      <div>
+        <h3>Image</h3>
+        <p>NASA Earth Observatory image by Joshua Stevens, using Landsat data from the U.S. Geological Survey. Public domain.</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>
